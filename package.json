@@ -9,19 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
-<<<<<<< HEAD
     "@heroicons/react": "^2.2.0",
     "motion": "^12.16.0",
     "next": "15.3.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-type-animation": "^3.2.0"
-=======
-    "motion": "^12.16.0",
-    "next": "15.3.3",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
->>>>>>> 015536dfa18446df8b8edafeb8072e0c9edb5925
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
