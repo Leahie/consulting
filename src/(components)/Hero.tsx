@@ -1,11 +1,17 @@
 import Image from "next/image";
 import main from '@/(assets)/1.jpg'
 import { Montserrat } from "next/font/google";
+import { motion } from "framer-motion"
+import ArrowDropDownCircleIcon from '@mui/icons-material/ArrowDropDownCircle';
+
+
 const montserrat = Montserrat({subsets: ["latin"], weight:['200', '400', '500','600', '700']});
 
 import "./Hero.css"
 interface HeroProps{
     source: string
+    tagline: ReactNode
+    icon?: ReactNode;
 }
 
 export default function Hero(props: HeroProps){
@@ -17,7 +23,13 @@ export default function Hero(props: HeroProps){
             </video>
             <div className="gradimg"></div>
             <div className="Info">
-            <h1 className="text-[7em]"><i>Random</i> Powerful Tagline.</h1>
+            {props.tagline}
+
+            {props.icon && (
+                <div className="">
+                {props.icon}
+                </div>
+            )}
              </div>
         </div>
     )

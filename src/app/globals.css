@@ -7,7 +7,7 @@
   --med: #7AB2B2;
   --dark: #2d3641;
   --black: #222831;
-  --background: #282d33;
+  --background: linear-gradient(to bottom right, #131313, #1b083f);;
   --foreground: #171717;
 }
 

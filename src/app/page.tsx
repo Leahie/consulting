@@ -3,65 +3,64 @@ import Image from "next/image";
 import Nav from '@/(components)/Nav'
 import Hero from '@/(components)/Hero'
 import Heading from "@/(components)/Heading";
-import leaders from "@/(assets)/Leadership.json"
+
 import { motion } from "framer-motion"
+import TimelineComp from "./Timeline";
+import Team from "./Team";
+import Method from "./Method";
 
 export default function Home() {
   return (
     <div>
       <Nav place={-1}/>
-      <Hero source="/Intro.mp4"/>
+      <Hero source="/Intro.mp4" tagline={<h1 className="text-[7em]">The Tortoise <i>Beat</i> the Hare</h1>}/>
+
+      {/* Introduction */}
       <div className="bg-slate-100">
-      <motion.div className="flex  items-center  py-[5em] mx-[10em]"
+      <motion.div className="flex  items-center  py-[5em] mx-[10em] bg-"
         initial={{ opacity: 0,  y:50}}
         animate={{ opacity: 1,   y: 0}}
         transition={{ duration: 0.5 }}>
           <div className="flex flex-col basis-1/3 text-[calc(50vh/25)]">
-            <h2 className="font-bold text-[1.7em] text-left">Math in competitions, they're focused on <span className="decoration-light-color decoration-4 underline underline-offset-[3px]">tricks</span>.</h2>
+            <h2 className="font-bold text-[1.7em] text-left"><span className="decoration-light-color decoration-4 underline underline-offset-[3px]">Luck</span> is what happens when preparation meets opportunity.</h2>
             <motion.div className=" mt-3">
               <p className="  text-left">
-                Our club is focused on a different topic: <span className="decoration-light-color decoration-4 underline underline-offset-[3px]">Math Modeling</span>. We will teach you how to apply tons of unique techniques, some of which you might not get to learn until senior year. We also compete in the annual Mathworks Math Modeling (M3) challenge, a national competition with over<span className="decoration-light-color decoration-4 underline underline-offset-[3px]">$100,000</span> in prizes.
+                Our consulting is made by <span className="decoration-light-color decoration-4 underline underline-offset-[3px]">students</span> for students.
               </p>
             </motion.div>
           </div>
-          <div className="basis-2/3 object-cover flex overflow-hidden relative h-[50vh] w-[65em] mx-10 mb-5 rounded-lg shadow-xl"><Image  src={"/m3.jpg"} fill={true}  quality={100} objectFit="cover"   alt="Picture of the author" /></div>
-          
-          
-        
+          <div className="basis-2/3 object-cover flex overflow-hidden relative h-[50vh] w-[65em] mx-10 mb-5 rounded-lg shadow-xl"><Image  src={"/1.jpg"} fill={true}  quality={100} objectFit="cover"   alt="Picture of the author" /></div>                    
       </motion.div>
 
       </div>
       
-      <div >
-      <Heading link="none" num="2" blurb="our leadership."/>     
-      
-      <div className="flex flex-wrap gap-[2em] mx-[5vw] mb-[10vh] justify-center">
-          {
-              leaders.map(({name, role, image}, index)=>(
-                  
-                <motion.div className={["flex flex-col content-center items-center justify-center max-w-xs m-4 ", "PockerCard"].join(" ")}
-                  initial={{ opacity: 0}}
-                  whileInView={{ opacity: 1}}
-                  transition={{ type: "spring", duration: 2 }}
-                  whileHover={{
-                      scale: 1.15, 
-                      rotate:0
-                    }}
-                  whileTap={{
-                  scale: 1.15, 
-                  rotate:0
-                  }}
-                >
-                  <Image className="rounded-full w-full shadow-lg" src={image} width={220} height={220} alt="Picture of the author"/>
-                  <p className={["w-full mt-2 break-words text-center text-dark-color", 'font-roboto'].join(' ')}>{name} / {role}</p>
-                </motion.div>
-                
-              ))
-          }
+      {/* Timeline */}
+      <div className="text-[var(--white)] w-full flex flex-col content-center items-center">
+      <Heading link="none" num="2" blurb="the typical timeline."/>     
+      <TimelineComp/>
       </div>
+
+      {/* Team */}
+      {/* Gradient Fade Wrapper */}
+      <div className="relative z-10">
+      {/* Top Fade */}
+        <div className="absolute top-0 left-0 w-full h-16 bg-gradient-to-b from-[ #131313] to-[rgba(241,245,249,0)] z-[-1]" />
+
+      {/* Team Section (bg-slate-100) */}
+        <div className="bg-slate-100 relative z-10">
+          <Team />
+        </div>
+
+        {/* Bottom Fade */}
+        <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-[rgba(27,8,63,1)] to-[rgba(241,245,249,0)] z-[-1]" />
       </div>
-      
-          
+
+
+      {/* Why Should You Trust Us */}
+          <h2 className=" flex flex-col items-center text-[40px] mx-[1em] my-[1em] text-white font-barlow text-500">
+                <span className="font-bold lg:text-[100px] sm:text-[50px]">Nervous? </span> <span>trust our method</span>
+            </h2>  
+          <Method/>
     </div>
   );
 }
