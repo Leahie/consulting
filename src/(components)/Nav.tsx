@@ -43,7 +43,7 @@ export default function Nav(props: BoxProps){
                 </span>
             </div>
             <div className={['Navlinks', LinksClass, 'font-roboto'].join(' ')}>
-                <Link href="/challenge" style={props.place===0 ? { borderBottom: "5px solid #453F78"} : {}}>Packages & Pricing</Link>
+                <Link href="/pricing" style={props.place===0 ? { borderBottom: "5px solid #453F78"} : {}}>Packages & Pricing</Link>
                 <Link href="/lectures" style={props.place===1 ? {borderBottom: "5px solid #453F78"} : {}}>About</Link>
                 {/* <Link href="/portfolio" style={props.place===2 ? { borderBottom: "5px solid #453F78"} : {}}>RESOURCES</Link> */}
             </div>
