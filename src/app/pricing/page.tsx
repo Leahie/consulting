@@ -6,42 +6,50 @@ import { CheckCircleIcon } from "@heroicons/react/24/solid";
 import React from "react";
 
 export default function PricingComparison() {
-  const plans = ["Safety", "Target", "Ivy"];
+  const plans = ["Silver", "Gold", "Platinum"];
   const features = [
     {
       section: "Discovery & Competitive Edge Positioning",
       items: [
-        "Kickoff – Long-Term Client Questionnaire",
+        "Schools", 
+        "Hours",
+        "Client Questionnaire",
         "Questionnaire Review & Analysis",
-        "Kickoff Strategy Session",
-        "Lesson Plan Outline",
-        "Lesson Plan Review with Parents (Optional)",
-      ],
-    },
-    {
-      section: "Mentorship & Ongoing Guidance",
-      items: [
-        "Weekly 1-on-1 Mentorship",
-        "Essay Brainstorming Sessions",
-        "Progress Tracking Reports",
-        "Direct Parent Feedback (Biweekly)",
+        "Developing the Story",
+        "Exhaustive Iterative Essay Drafting",
+        "Activities List Review",
+        "Application Review, High-Level Scan", 
+        "Email Support", 
+        "Phone Support"
       ],
     },
   ];
 
   // Matrix of features: row[feature][plan] = true/false
-  const accessMatrix = [
-    [true, true, true, true, true], // Section 1
-    [false, true, true, true], // Section 2
-  ];
+ const accessMatrix = [
+  // Schools
+  ["1", "3", "5"],
+  // Hours
+  ["6", "12", "18"],
+  // Client Questionnaire
+  [true, true, true],
+  [true, true, true],
+  [true, true, true],
+  [true, true, true],
+  [true, true, true],
+  [false, true, true],
+  [true, true, true],
+  [false, true, true],
+];
 
-  const getAccess = (sectionIndex: number, rowIndex: number, planIndex: number) => {
-    return accessMatrix[sectionIndex]?.[planIndex] ?? true;
-  };
+
+const getAccess = (sectionIndex: number, rowIndex: number, planIndex: number) => {
+  return accessMatrix[rowIndex]?.[planIndex];
+};
 
   return (
-    <div className="bg-[#0a1b25] text-white min-h-screen">
-      <Nav place={1} />
+    <div className=" text-white min-h-screen">
+      <Nav place={0 } />
       <motion.div
         className="py-16 px-4 max-w-7xl mx-auto"
         initial={{ opacity: 0, y: 30 }}
@@ -94,11 +102,18 @@ export default function PricingComparison() {
                       <td className="py-3 px-4 text-white">{feature}</td>
                       {plans.map((_, planIndex) => (
                         <td key={planIndex} className="text-center">
-                          {getAccess(sectionIndex, rowIndex, planIndex) ? (
-                            <CheckCircleIcon className="w-5 h-5 text-green-400 inline-block" />
-                          ) : (
-                            <span className="text-gray-600">—</span>
-                          )}
+                          {
+                            (() => {
+                              const access = getAccess(sectionIndex, rowIndex, planIndex);
+                              if (typeof access === "string" || typeof access === "number") {
+                                return <span className="text-white">{access}</span>;
+                              } else if (access === true) {
+                                return <CheckCircleIcon className="w-5 h-5 text-green-400 inline-block" />;
+                              } else {
+                                return <span className="text-gray-600">—</span>;
+                              }
+                            })()
+                          }
                         </td>
                       ))}
                     </tr>
@@ -109,7 +124,6 @@ export default function PricingComparison() {
           </table>
         </div>
       </motion.div>
-      <Heading link="none" num="3" blurb="compare our support plans." />
     </div>
   );
 }

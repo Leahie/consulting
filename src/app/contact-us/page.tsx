@@ -1,16 +1,20 @@
+"use client"
 import Hero from '@/(components)/Hero'
 import ArrowDropDownCircleIcon from '@mui/icons-material/ArrowDropDownCircle';
 import { motion } from "framer-motion"
-import {
-    Button,
-    Dialog,
-    DialogHeader,
-    DialogBody,
-    DialogFooter,
-  } from "@material-tailwind/react";
-
+import { useState } from 'react';
+import Dialog from '@mui/material/Dialog';
+import DialogTitle from '@mui/material/DialogTitle';
+import DialogContent from '@mui/material/DialogContent';
+import DialogActions from '@mui/material/DialogActions';
+import Button from '@mui/material/Button';
 
 export default function ContactUs() {
+    const [open, setOpen] = useState(false);
+    const handleOpen = (leader = null) => {
+        setOpen(!open);
+    };
+
     return(
        <>
        <div>
@@ -33,115 +37,34 @@ export default function ContactUs() {
         {/* Buttons*/}
         <div className='bg-slate-100 flex justify-center gap-5 pt-[2em] pb-[10em] text-white text-[15px]'>
             <button className="bg-slate-800 py-2 px-5 rounded">Book a Consultation</button>
-            <button className="bg-slate-800 py-2 px-5 rounded">Interest Form</button>
+            <button className="bg-slate-800 py-2 px-5 rounded" onClick={()=>handleOpen()}>Interest Form</button>
         </div>
 
 
        </div> 
-
-               <Dialog open={open} handler={handleOpen}>
-                <DialogHeader>{</DialogHeader>
-                <DialogBody>
-            
-                        {/* Exercise Details */}
-                        <div className="flex flex-wrap flex-col gap-4 py-5">
-                            <label className="block text-sm font-semibold">Body Region:</label>
-                            <select
-                                value={exercise.body_region}
-                                onChange={(e) => setExercise((prev) => ({ ...prev, body_region: e.target.value }))}
-                            >
-                            <option value="" disabled hidden>Choose a body region</option>
-                            {body_regions.map((elem) => (
-                                <option key={elem} value={elem}>
-                                {elem}
-                                </option>
-                            ))}
-                            </select>
-                            
-                            <label className="block text-sm font-semibold">Difficulty:</label>
-                            <select
-                            value={exercise.difficulty}
-                            onChange={(e) => setExercise((prev) => ({ ...prev, difficulty: e.target.value }))}
-                            >
-                            <option value="" disabled hidden>Choose a difficulty</option>
-                            {difficulty_levels.map((elem) => (
-                                <option key={elem} value={elem}>
-                                {elem}
-                                </option>
-                            ))}
-                            </select>
-
-                            <label className="block text-sm font-semibold">Primary Classification:</label>
-                            <select
-                            value={exercise.primary_classification}
-                            onChange={(e) =>
-                                setExercise((prev) => ({ ...prev, primary_classification: e.target.value }))
-                            }
-                            >
-                            <option value="" disabled hidden>Choose a classification</option>
-                            {primary_classifications.map((elem) => (
-                                <option key={elem} value={elem}>
-                                {elem}
-                                </option>
-                            ))}
-                            </select>
-
-                            <label className="block text-sm font-semibold">Target Muscle:</label>
-                            <select
-                            value={exercise.target_muscle}
-                            onChange={(e) => setExercise((prev) => ({ ...prev, target_muscle: e.target.value }))}
-                            >
-                            <option value="" disabled hidden>Choose a target muscle</option>
-                            {target_muscle.map((elem) => (
-                                <option key={elem} value={elem}>
-                                {elem}
-                                </option>
-                            ))}
-                            </select>
-
-                            <label className="block text-sm font-semibold">Primary Equipment:</label>
-                            <select
-                            value={exercise.primary_equipment}
-                            onChange={(e) =>
-                                setExercise((prev) => ({ ...prev, primary_equipment: e.target.value }))
-                            }
-                            >
-                            <option value="" disabled hidden>Choose equipment</option>
-                            {equipment.map((elem) => (
-                                <option key={elem} value={elem}>
-                                {elem}
-                                </option>
-                            ))}
-                            </select>
-                            <label className="block text-sm font-semibold">Video Url:</label>
-                            <input type="text" 
-                                value={exercise.short_demo} 
-                                onChange={(e) => setExercise((prev) => ({...prev, short_demo: e.target.value}))}
-                                className="w-full border px-2 py-1 rounded"
-                            /> 
-
-                        </div>
-
-                </DialogBody>
-                <DialogFooter>
-                    <Button variant="text"
-                    color="red"
-                    className="mr-1"
-                        onClick={(e) => {
-                            e.stopPropagation();
-                            deleteEx()}}
-                        >Delete
-                    </Button>
-                    <Button
-                    variant="text"
-                    color=""
-                    onClick={handleOpen}
-                    className="mr-1"
-                    >
-                    <span>Cancel</span>
-                    </Button>
-                </DialogFooter>
-            </Dialog>
+ 
+               <Dialog open={open} onClose={()=>handleOpen(null)} fullWidth maxWidth="lg" >
+                <DialogTitle ></DialogTitle>
+                <DialogContent className="p-4 ">
+                <iframe
+                    src="https://docs.google.com/forms/d/e/1FAIpQLScQ01vdkhZ7SW7h_Qt0h_VN94AvTYsVcx7x7NG1DzRG07VxrA/viewform?embedded=true"
+                    width="100%"
+                    height="600"
+                    frameBorder="0"
+                    marginHeight={0}
+                    marginWidth={0}
+                    title="Google Form"
+                    style={{ borderRadius: "12px", overflow: "hidden" }}
+                >
+                    Loading…
+                </iframe>
+                </DialogContent>
+                <DialogActions>
+                <Button variant="text" color="gray" onClick={handleOpen}>
+                    Close
+                </Button>
+                </DialogActions>
+            </Dialog> 
         </> 
        
     )
