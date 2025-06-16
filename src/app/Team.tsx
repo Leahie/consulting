@@ -15,9 +15,19 @@ import CloseIcon from '@mui/icons-material/Close';
 import Typography from '@mui/material/Typography';
 
 
+interface LeaderTypes {
+  name: string;
+  role: string;
+  college: string;
+  image: string;
+  qf: string[];
+  bio: string;
+}
+
+
 export default function Team(){
     const [open, setOpen] = useState(false);
-    const [selectedLeader, setSelectedLeader] = useState(null);
+    const [selectedLeader, setSelectedLeader] = useState<LeaderTypes|null>(null);
 
     const handleOpen = (leader = null) => {
         setSelectedLeader(leader);
