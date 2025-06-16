@@ -29,7 +29,7 @@ export default function Team(){
     const [open, setOpen] = useState(false);
     const [selectedLeader, setSelectedLeader] = useState<LeaderTypes|null>(null);
 
-    const handleOpen = (leader = null) => {
+    const handleOpen = (leader: LeaderTypes | null) => {
         setSelectedLeader(leader);
         setOpen(!open);
     };
