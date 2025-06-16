@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <div>
       <Nav place={-1}/>
-      <Hero source="/Intro.mp4" tagline={<h1 className="text-[7em]">The Tortoise <i>Beat</i> the Hare</h1>}/>
+      <Hero source="/Intro.mp4" tagline={<h1 className="text-[7em]">Develop <i>Your</i> Story</h1>}/>
 
       {/* Introduction */}
       <div className="bg-slate-100">

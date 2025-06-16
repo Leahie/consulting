@@ -1,56 +1,130 @@
 "use client";
 import Link from 'next/link'
 import Hamburger from './Hamburger';
-import './Nav.css'
 import { Montserrat } from "next/font/google";
-import React, {useState, useEffect, useRef} from 'react';
-import { useRouter } from 'next/router';
+import React, {useState, useEffect} from 'react';
+import "./Nav.css"
 
 const montserrat = Montserrat({subsets: ["latin"], weight:['200', '400', '500','600', '700']});
-
 
 interface BoxProps{
     place: number;
 }
 
 export default function Nav(props: BoxProps){
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-    const [LinksClass, setLinksClass] = useState("")
-    const [ItemsClass, setItemsClass] = useState("")
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
 
-    
+    // Close menu when clicking outside or on link
+    const closeMenu = () => {
+        setIsMenuOpen(false);
+    };
 
-    const toggleit = () =>{
-        if (LinksClass === ""){
-            setLinksClass   ("On")
-            setItemsClass ("Off")
-        } 
-        else{
-            setLinksClass("")
-            setItemsClass ("")
+    // Prevent body scroll when mobile menu is open
+    useEffect(() => {
+        if (isMenuOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'unset';
         }
-    }
-
-    
+        
+        return () => {
+            document.body.style.overflow = 'unset';
+        };
+    }, [isMenuOpen]);
     
     return(
-        <div className={['Nav',ItemsClass, montserrat.className].join(' ')}>
-            <div className={['Logo', 'font-ysabeau'].join(' ')}>
-                <a href="/" id='LogoRI'>Logo</a>
-                <div id="LogoMID"></div>
-                <span onClick={toggleit} className="navbar-toggle" id="js-navbar-toggle">
-                   <Hamburger /> 
-                </span>
+        <>  
+            <button
+                className={`hamburger-btn transition-all ${
+                isMenuOpen
+                    ? 'fixed top-6 right-6 z-[10001]'
+                    : 'absolute top-[4.5em] right-[2.5em] z-[100]'
+                }`}
+                onClick={toggleMenu}
+                aria-label="Toggle navigation menu"
+            >
+                <Hamburger />
+            </button>
+
+            <div className={`nav-container ${montserrat.className}`}>
+                <div className="nav-logo">
+                    <Link href="/" className="logo-link">Just-In Consulting</Link>
+
+                </div>
+
+                {/* Desktop Navigation */}
+                <div className="nav-links-desktop">
+                    <Link 
+                        href="/pricing" 
+                        className={props.place === 0 ? 'active' : ''}
+                    >
+                        Packages & Pricing
+                    </Link>
+                    <Link 
+                        href="/about" 
+                        className={props.place === 1 ? 'active' : ''}
+                    >
+                        About
+                    </Link>
+                    <Link 
+                        href="/essayedit" 
+                        className={props.place === 2 ? 'active' : ''}
+                    >
+                        College Essay Review
+                    </Link>
+                </div>
+
+                <div className="nav-btn-desktop">
+                    <Link href="/contact-us" className="consultation-btn">
+                        <span>Free Consultation</span>
+                    </Link>
+                </div>
             </div>
-            <div className={['Navlinks', LinksClass, 'font-roboto'].join(' ')}>
-                <Link href="/pricing" style={props.place===0 ? { borderBottom: "5px solid #453F78"} : {}}>Packages & Pricing</Link>
-                <Link href="/lectures" style={props.place===1 ? {borderBottom: "5px solid #453F78"} : {}}>About</Link>
-                {/* <Link href="/portfolio" style={props.place===2 ? { borderBottom: "5px solid #453F78"} : {}}>RESOURCES</Link> */}
+
+            {/* Mobile Menu Overlay */}
+            <div className={`mobile-menu-overlay ${isMenuOpen ? 'open' : ''}`}>
+                {/* Close button in overlay */}
+
+                <div className="mobile-menu-content">
+                    <div className="mobile-nav-links">
+                        <Link 
+                            href="/pricing" 
+                            className={`mobile-link ${props.place === 0 ? 'active' : ''}`}
+                            onClick={closeMenu}
+                        >
+                            Packages & Pricing
+                        </Link>
+                        <Link 
+                            href="/about" 
+                            className={`mobile-link ${props.place === 1 ? 'active' : ''}`}
+                            onClick={closeMenu}
+                        >
+                            About
+                        </Link>
+                        <Link 
+                            href="/essayedit" 
+                            className={`mobile-link ${props.place === 2 ? 'active' : ''}`}
+                            onClick={closeMenu}
+                        >
+                            College Essay Review
+                        </Link>
+                    </div>
+                    
+                    <div className="mobile-consultation-section">
+                        <Link 
+                            href="/contact-us" 
+                            className="mobile-consultation-btn"
+                            onClick={closeMenu}
+                        >
+                            <span>Free Consultation</span>
+                        </Link>
+                    </div>
+                </div>
             </div>
-            <div className={['Navlinks', LinksClass, 'font-roboto btn'].join(' ')}>
-                <Link href="/contact-us" > <span>Free Consultation</span></Link>
-            </div>
-        </div>
-    )
-    
+        </>
+    );
 }

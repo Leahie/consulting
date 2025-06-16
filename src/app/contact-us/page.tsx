@@ -30,14 +30,14 @@ export default function ContactUs() {
         />
         {/* Why Should You Trust Us */}
         <div className="bg-slate-100 flex justify-center text-center">
-            <h2 className='font-bold text-[1.7em] pt-[5em] mx-[10em]'>
+            <h2 className='font-bold text-[1.7em] pt-[5em] mx-3 lg:mx-[10em]'>
                     <span className='decoration-light-color decoration-4 underline underline-offset-[3px]'>Reach Out! </span>Our process begins with a short 15 minute conversation where we get to learn more about your student and you get your questions answered. 
             </h2>
         </div>
         {/* Buttons*/}
         <div className='bg-slate-100 flex justify-center gap-5 pt-[2em] pb-[10em] text-white text-[15px]'>
-            <button className="bg-slate-800 py-2 px-5 rounded">Book a Consultation</button>
-            <button className="bg-slate-800 py-2 px-5 rounded" onClick={()=>handleOpen()}>Interest Form</button>
+            <button className="cursor-pointer bg-slate-800 py-2 px-5 rounded">Book a Consultation</button>
+            <button className="cursor-pointer bg-slate-800 py-2 px-5 rounded " onClick={()=>handleOpen()}>Interest Form</button>
         </div>
 
 

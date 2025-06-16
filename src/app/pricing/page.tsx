@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { CheckCircleIcon } from "@heroicons/react/24/solid";
 import React from "react";
 
+
 export default function PricingComparison() {
   const plans = ["Silver", "Gold", "Platinum"];
   const features = [
@@ -33,11 +34,11 @@ export default function PricingComparison() {
   ["6", "12", "18"],
   // Client Questionnaire
   [true, true, true],
-  [true, true, true],
-  [true, true, true],
+  [false, true, true],
   [true, true, true],
   [true, true, true],
   [false, true, true],
+  [false, false, true],
   [true, true, true],
   [false, true, true],
 ];

@@ -53,15 +53,18 @@
 }
 
 @media (max-width:780px) {
-    .Hero .Info{
+    /* .Hero .Info{
         position: absolute;
         top: 10%;
         left: 15%;
         margin: auto;
         width:50vw;
-      }
+      } */
     .Hero .Info h1{
-        font-size: 4em;
+        font-size: 100px;
+        font-weight: bold;
+        margin-left: 10px;
+        margin-right: 10px;
     }
     .Hero .Info .Buttons{
         display: none;
