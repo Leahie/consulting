@@ -10,8 +10,8 @@ const montserrat = Montserrat({subsets: ["latin"], weight:['200', '400', '500','
 import "./Hero.css"
 interface HeroProps{
     source: string
-    tagline: ReactNode
-    icon?: ReactNode;
+    tagline: React.ReactNode
+    icon?: React.ReactNode;
 }
 
 export default function Hero(props: HeroProps){
