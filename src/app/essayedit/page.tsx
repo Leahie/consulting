@@ -73,12 +73,12 @@ export default function EssayEdit() {
       </h1>
 
       <div className="flex justify-center">
-        <Card className="w-[80vw] p-8 text-white mx-auto" shadow={false}>
+        <Card className="w-[80vw] p-8 text-white mx-auto" shadow={false}  {...({} as React.ComponentProps<typeof Card>)}>
           <h2 className="text-2xl underline underline-offset-8 mb-2 text-left">
             How We Edit
           </h2>
 
-          <Typography color="gray" className="mt-1 font-normal text-left">
+          <Typography color="gray" className="mt-1 font-normal text-left"  {...({} as React.ComponentProps<typeof Typography>)}>
             <p>
               Welcome to asynchronous editing where we provide quick and concise
               feedback to student writing!
@@ -128,14 +128,14 @@ export default function EssayEdit() {
               <h2 className="text-2xl underline underline-offset-8">Student</h2>
 
               <div>
-                <Typography variant="h6" color="blue-gray" className="mb-1">
+                <Typography variant="h6" color="blue-gray" className="mb-1"  {...({} as React.ComponentProps<typeof Typography>)}>
                   Your Name
                 </Typography>
                 <Input
                   inputRef={firstNameRef}
                   name="entry.1736529550"
                   placeholder="First Name"
-                  className="p-2 rounded-md"
+                  className="p-2 rounded-md"  {...({} as React.ComponentProps<typeof Input>)}
                 />
               </div>
 
@@ -144,19 +144,19 @@ export default function EssayEdit() {
                   inputRef={lastNameRef}
                   name="entry.648272910"
                   placeholder="Last Name"
-                  className="p-2 rounded-md"
+                  className="p-2 rounded-md"  {...({} as React.ComponentProps<typeof Input>)}
                 />
               </div>
 
               <div>
-                <Typography variant="h6" color="blue-gray" className="mb-1">
+                <Typography variant="h6" color="blue-gray" className="mb-1"  {...({} as React.ComponentProps<typeof Typography>)}>
                   Your Email
                 </Typography>
                 <Input
                   inputRef={emailRef}
                   name="entry.409026736"
                   placeholder="name@mail.com"
-                  className="p-2 rounded-md"
+                  className="p-2 rounded-md"  {...({} as React.ComponentProps<typeof Input>)}
                 />
               </div>
             </div>
@@ -166,7 +166,7 @@ export default function EssayEdit() {
               <h2 className="text-2xl underline underline-offset-8">Essay</h2>
 
               <div>
-                <Typography variant="h6" color="blue-gray" className="mb-2">
+                <Typography variant="h6" color="blue-gray" className="mb-2"  {...({} as React.ComponentProps<typeof Typography>)}>
                   What is this application for? *
                 </Typography>
                 <div className="flex flex-col gap-2 text-sm text-gray-200">
@@ -193,10 +193,10 @@ export default function EssayEdit() {
 
               {essayType === "Brag Sheet" && (
                 <div>
-                  <Typography variant="h6" color="blue-gray" className="mb-2">
+                  <Typography variant="h6" color="blue-gray" className="mb-2"  {...({} as React.ComponentProps<typeof Typography>)}>
                     Enter Your Essay (limit: 10,000 characters)
                   </Typography>
-                  <Textarea
+                  <Textarea  {...({} as React.ComponentProps<typeof Textarea>)}
                     rows={10}
                     name="entry.1874314604"
                     placeholder="Paste your brag sheet here..."
@@ -212,10 +212,10 @@ export default function EssayEdit() {
 
               {essayType === "Personal Essay" && (
                 <div>
-                  <Typography variant="h6" color="blue-gray" className="mb-2">
+                  <Typography variant="h6" color="blue-gray" className="mb-2"  {...({} as React.ComponentProps<typeof Typography>)}>
                     Personal Essay (limit: 650 words)
                   </Typography>
-                  <Textarea
+                  <Textarea  {...({} as React.ComponentProps<typeof Textarea>)}
                     rows={10}
                     name="entry.2128284226"
                     placeholder="Paste your personal essay here..."
@@ -235,21 +235,21 @@ export default function EssayEdit() {
                     name="entry.1695463651"
                     placeholder="What school is this for?"
                     required
-                    className="p-2 rounded-md after:content-none"
+                    className="p-2 rounded-md after:content-none"  {...({} as React.ComponentProps<typeof Input>)}
                   />
                   <Input
                     name="entry.231505224"
                     placeholder="What is the prompt?"
                     required
-                    className="p-2 rounded-md after:content-none" 
+                    className="p-2 rounded-md after:content-none"  {...({} as React.ComponentProps<typeof Input>)}
                   />
                   <Input
                     name="entry.334781364"
                     placeholder="What is the character limit?"
                     required
-                    className="p-2 rounded-md after:content-none"
+                    className="p-2 rounded-md after:content-none"  {...({} as React.ComponentProps<typeof Input>)}
                   />
-                  <Textarea
+                  <Textarea  {...({} as React.ComponentProps<typeof Textarea>)}
                     rows={10}
                     name="entry.1566517753"
                     placeholder="Enter your supplemental essay here..."
@@ -265,10 +265,10 @@ export default function EssayEdit() {
 
               {essayType === "Activities List & Honors" && (
                 <div className="flex flex-col gap-4">
-                  <Typography variant="h6" color="blue-gray">
-                    Please format your activities and honors as follows:
+                  <Typography variant="h6" color="blue-gray"  {...({} as React.ComponentProps<typeof Typography>)}>
+                    Please format your activities and honors as follows: 
                   </Typography>
-                  <Textarea
+                  <Textarea  {...({} as React.ComponentProps<typeof Textarea>)}
                     name="entry.780968202"
                     rows={10}
                     placeholder="Paste your activities list & honors here (limit: 3500 characters)"
@@ -288,7 +288,7 @@ export default function EssayEdit() {
               <h2 className="text-2xl underline underline-offset-8">Request</h2>
 
               <div>
-                <Typography variant="h6" color="blue-gray" className="mb-2">
+                <Typography variant="h6" color="blue-gray" className="mb-2"  {...({} as React.ComponentProps<typeof Typography>)}>
                   Turnaround*
                 </Typography>
                 <div className="flex flex-col gap-2 text-sm text-gray-200">
@@ -310,7 +310,7 @@ export default function EssayEdit() {
                 </div>
               </div>
               <div>
-                <Typography variant="h6" color="blue-gray" className="mb-2">
+                <Typography variant="h6" color="blue-gray" className="mb-2"  {...({} as React.ComponentProps<typeof Typography>)}>
                   If interested, please select the specific specialized editor you would like to have edit your essay. 
                 </Typography>
                 <div className="flex flex-col gap-2 text-sm text-gray-200">
@@ -334,7 +334,7 @@ export default function EssayEdit() {
 
               {time && essayType && (
                 <div>
-                  <Typography variant="h6" color="blue-gray" className="mb-2">
+                  <Typography variant="h6" color="blue-gray" className="mb-2"  {...({} as React.ComponentProps<typeof Typography>)}>
                     Price*
                   </Typography>
                   <p>
@@ -345,13 +345,13 @@ export default function EssayEdit() {
               )}
 
               <div>
-                <Typography variant="h6" color="blue-gray" className="mb-1">
+                <Typography variant="h6" color="blue-gray" className="mb-1"  {...({} as React.ComponentProps<typeof Typography>)}>
                   Comments
                 </Typography>
                 <Input
                   name="entry.358497509"
                   placeholder="Let us know if you have any special requests"
-                  className="p-2 rounded-md"
+                  className="p-2 rounded-md"  {...({} as React.ComponentProps<typeof Input>)}
                 />
               </div>
             </div>
@@ -364,7 +364,7 @@ export default function EssayEdit() {
               </div>
             )}
 
-            <Button className="mt-6 bg-yellow-400" fullWidth type="submit">
+            <Button className="mt-6 bg-yellow-400" fullWidth type="submit"  {...({} as React.ComponentProps<typeof Button>)}>
               Submit
             </Button>
           </form>
