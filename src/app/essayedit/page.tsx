@@ -8,8 +8,8 @@ import {
 } from "@material-tailwind/react";
 import { motion } from "framer-motion";
 import { useState, useRef } from "react";
-import Pay from "./Pay";
-import Checkout from "@/(components)/Checkout"
+// import Pay from "./Pay";
+// import Checkout from "@/(components)/Checkout"
 
 export default function EssayEdit() {
   const [essayType, setEssayType] = useState("");
