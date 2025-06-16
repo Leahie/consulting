@@ -60,7 +60,8 @@ export default function ContactUs() {
                 </iframe>
                 </DialogContent>
                 <DialogActions>
-                <Button variant="text" color="primary" onClick={handleOpen}>
+                <Button variant="text" color="primary" onClick={() => handleOpen(null)}>
+
                     Close
                 </Button>
                 </DialogActions>
