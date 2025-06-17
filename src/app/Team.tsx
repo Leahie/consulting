@@ -73,7 +73,7 @@ export default function Team(){
                                       <a href="https://admissionado.com/team-member/nour-khachemoune/" className="font-semibold text-[25px] stretched-link text-decoration-none mb-2 d-inline-block">{leader.name}</a>
                                       
                                       <p className="card-text small text-slate-500 m-0 fw-medium">{leader.college}</p>
-                                      <ul className="flex gap-2 text-yellow-600">
+                                      <ul className="flex gap-2" style={{ color: leader.color }}>
                                           {leader.qf.map(item => (
                                               <li key={item}>{item}</li>
                                           ))}

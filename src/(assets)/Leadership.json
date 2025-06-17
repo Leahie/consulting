@@ -5,7 +5,8 @@
       "college": "Cornell University • CS",
       "image":"/leadership/leah.png", 
       "bio": "Leah Zhang is a TJHSST graduate attending Cornell next year for computer science. Leah is dedicated to helping others grow and tell their stories. She started her journey with an interest in activism and artistic expression. Growing up in a family where everyone had ADHD except her, she took to art to express the chaos. Later, she combined her background and interests to create initiatives such as an Assistive Technology (AT) fair called ATconnect, featuring 16 booths, centered on increasing accessibility towards AT. Leah customizes her approach to meet the needs of every client. She believes that her job is to help her client grow by uncovering their passions, building their confidence, and helping them shape their story into one that stands out. If you work with Leah, she’ll help develop your profile from a simple sketch to a multi-dimensional character painted in rich acrylics.",
-      "qf": ["#BowSeatSilver", "#M3SemiFinal", "#3ClubPres"]
+      "qf": ["#BowSeatSilver", "#M3SemiFinal", "#3ClubPres"],
+      "color": "#f59e0b"
     },
     {
       "name": "Megan Zhang",
@@ -13,7 +14,8 @@
       "college": "Georgetown University • Econ/Math",
       "image":"/leadership/meg.png",
       "bio":"Megan Zhang will be heading to Georgetown University next year, planning to major in economics and mathematics on a pre-law track. Throughout her TJ career, she took an avid interest in writing of any kind -- writing poetry, prose, historical analyses, theses, scientific papers, and recently, college essays. She’s published various literary journals for poetry and prose, along with two scientific publications. That breadth has given her a thorough understanding of how to adapt structure, tone, and rhetorical strategies for different audiences and purposes. As such, Megan believes that these minute, perhaps intuitive, subtleties make all the difference in how students present themselves as writers, academics, and college applicants. Through her years at TJ, she’s learned that crafting compelling narratives starts with intention, or, namely, finding the thread that transforms experiences into character. She’s happy to use that insight to advise college essays or other academic writing this year. Whether you’re just getting started or refining a draft, Megan’s here to support you in presenting your ideas with precision, authenticity, and confidence. ",
-      "qf": ["#EconCaptain", "#GMUScharIntern"]
+      "qf": ["#EconCaptain", "#GMUScharIntern"],
+      "color": "#f59e0b"
     },
     {
       "name": "Kathy Guo",
@@ -21,7 +23,8 @@
       "college": "Cornell University • Chem",
       "image":"/leadership/kathy.png",
       "bio":"Kathy Guo is a graduate who will be attending Cornell University next year, double majoring in chemistry and CS. Throughout Kathy’s years at TJ, peer reviewing other people’s writing, she has learned what makes a good essay. Kathy’s personal interest is chemistry. In the last 2 years, Kathy has participated in multiple chemistry tournaments such as USNCO and WUCT, and placed top 10 in the majority of them. She has helped other people and tutored teammates along the way to achieve their victory. In addition, last summer, Kathy worked with GMU mentors, specifically Dr. Yu and Pelumi Adanigbo, through the 2024 ASSIP summer research program, on research involving polarization of transition-metal dichalcogenides (TMDs). As a consultant, Kathy is excited to focus her time this summer on working with students and helping them achieve their goals!",
-      "qf": ["#ChemTeamCaptain", "#ASSIPIntern", "#SciOly"]
+      "qf": ["#ChemTeamCaptain", "#ASSIPIntern", "#SciOly"],
+      "color": "#f59e0b"
     },
     {
       "name": "John Yao",
@@ -29,7 +32,8 @@
       "college": "UCLA • CS",
       "image":"/leadership/john.png",
       "bio": "John Yao is a graduate headed off to UCLA as a CS major. In John’s TJ career, he was a driven leader and innovator as Woodwind Captain of the Marching Band, a class council member, a part of TJ’s Science Olympiad, and a creator of card games. John’s SAT score is 1580; he’s taken 10 AP exams and gotten 5s on all of them; John also wrote and published a paper in the Whitman Journal of Psychology. As a consultant, John is excited to use his academic and personal experience to help those with similar backgrounds develop a narrative that stands out. ",
-      "qf": ["#SAT1580", "#MarchBandCaptain", "#10APsALL5s"]
+      "qf": ["#SAT1580", "#MarchBandCaptain", "#10APsALL5s"],
+      "color": "#f59e0b"
     },
     {
       "name": "Sophia Lin",
@@ -37,7 +41,8 @@
       "college": "Harvard University • Gov/CS",
       "image":"/leadership/sophia.jpg",
       "bio":"Sophia Lin will be going to Harvard next year with a double concentration in computer science and government. She has been a pianist for thirteen years, representing Virginia at MTNA for three years in a row and performing at venues like the Atlas Theatre and the Kennedy Center. Like the majority of TJ students, Sophia didn’t have an overarching plan during her four years: she joined a comedic improvisation team on a whim, explored chemistry on the side, and started doing AI research for giggles. Sophia has been lucky to be supported by lots of free programs, like ASSIP at GMU, YIP at UChicago, and RSI at MIT. Her wildly different experiences will offer plenty of support to interested students. ",
-      "qf": ["#RSI", "#YIP", "#Pianist@Atlas&KennedyCeneter"]
+      "qf": ["#RSI", "#YIP", "#Pianist@Atlas&KennedyCeneter"],
+      "color": "#2563eb"
     },
     {
         "name": "Tsedneya Asrat",
@@ -45,7 +50,8 @@
         "college": "Virginia Tech • Engr",
         "image":"/leadership/tsed.jpg",
         "bio":"Tsedneya Asrat is a TJHSST graduate who will be attending Virginia Tech next year on a full ride. She will be coordinating scheduling with mentors and editing college essays. Tsedneya has extensive knowledge on revising writing, having volunteered as a writing tutor for over four years, totaling 200+ hours with around 150 students. Tsedneya is excited to use the same strategies her mentors taught her when she had college essay support from experienced tutors to help students craft their own powerful stories.",
-        "qf": ["#StudentSpeaker", "#AmbassadorofSTEM&Civics"]
+        "qf": ["#StudentSpeaker", "#AmbassadorofSTEM&Civics"],
+        "color": "#2563eb"
     },
     {
         "name": "Medha Chilukuri",
@@ -53,6 +59,7 @@
         "college": "University of Delaware • Chem Engr",
         "image":"/leadership/medha.png",
         "bio":"Medha Chilukuri is a recent graduate who will be attending the University of Delaware next year, majoring in chemical engineering. She is here to guide students on how to construct compelling essays for college. Medha has always loved writing about topics she’s passionate about through many different mediums — free verse, rap, and personal essay. Recently, she has also taken an interest in poetry for self-expression. In the National Amateur Poetry Competition, she qualified as a semifinalist. In her free time, she is extremely devoted to service, serving as president for RAD (Recording Audio for the Disabled) and volunteering for two years for a cultural summer camp. Medha is eager to help others. ",
-        "qf": ["#PoetryCompSemiFinalist", "NASAvastsScholar"]
+        "qf": ["#PoetryCompSemiFinalist", "NASAvastsScholar"],
+        "color": "#2563eb"
     }
   ]
