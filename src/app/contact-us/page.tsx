@@ -35,7 +35,7 @@ export default function ContactUs() {
             </h2>
         </div>
         {/* Buttons*/}
-        <div className='bg-slate-100 flex justify-center gap-5 pt-[2em] pb-[10em] text-white text-[15px]'>
+        <div className='bg-slate-100 flex justify-center gap-5 pt-[2em] pb-[10em] text-white text-[15px] px-2'>
             <a className="cursor-pointer bg-slate-800 py-2 px-5 rounded" target="_blank" rel="noopener noreferrer" href='https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3rPoc2c1_bm0B1N7Mo-tvvflu5ypB5ha4JTUvqOA2pAmlNKod_d5TrNnNSJhU0dwygZyrZ1YPo'>Book a Consultation</a>
             <button className="cursor-pointer bg-slate-800 py-2 px-5 rounded " onClick={()=>handleOpen()}>Interest Form</button>
         </div>
