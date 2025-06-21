@@ -52,7 +52,7 @@ export default function Nav(props: BoxProps){
 
             <div className={`nav-container ${montserrat.className}`}>
                 <div className="nav-logo">
-                    <Link href="/" className="logo-link">UniBound Counsulting</Link>
+                    <Link href="/" className="logo-link text-[20px] sm:text-[25px]">UniBound Counsulting</Link>
 
                 </div>
 

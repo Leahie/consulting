@@ -1,14 +1,14 @@
 [{
         "name": "Packages & Pricing",
-        "link": "/"
+        "link": "/pricing"
     },
     {
         "name": "About",
-        "link": "/"
+        "link": "/about"
     },
     {
         "name": "Free Consultation",
-        "link": "/"
+        "link": "/contact-us"
     }
 
 
