@@ -18,8 +18,15 @@ export default function Hero(props: HeroProps){
     return(
         <div className={['Hero', "font-barlow"].join(' ')}>
 
-            <video style={{objectFit:"cover"}} className="bgimg" autoPlay loop muted >
-                <source src={props.source} type="video/mp4"/>
+            <video
+                style={{ objectFit: "cover", pointerEvents: "none" }}
+                className="bgimg"
+                autoPlay
+                loop
+                muted
+                playsInline
+            >
+            <source src={props.source} type="video/mp4" />
             </video>
             <div className="gradimg"></div>
             <div className="Info">
