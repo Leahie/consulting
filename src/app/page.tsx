@@ -58,7 +58,7 @@ export default function Home() {
 
       {/* Why Should You Trust Us */}
           <h2 className=" flex flex-col items-center text-[40px] mx-[1em] my-[1em] text-white font-barlow text-500">
-                <span className="font-bold lg:text-[100px] sm:text-[50px]">Nervous? </span> <span>trust our method</span>
+                <span className="font-bold lg:text-[100px] sm:text-[50px]">Nervous? </span> <span className="sm:text-[40px] text-[25px]">trust our method</span>
             </h2>  
           <Method/>
     </div>
