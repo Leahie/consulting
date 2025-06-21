@@ -17,14 +17,18 @@ export default function Home() {
 
       {/* Introduction */}
       <div className="bg-slate-100">
-      <motion.div className="flex  items-center  py-[5em] mx-[10em] bg-"
-        initial={{ opacity: 0,  y:50}}
-        animate={{ opacity: 1,   y: 0}}
-        transition={{ duration: 0.5 }}>
-          <div className="flex flex-col basis-1/3 text-[calc(50vh/25)]">
-            <h2 className="font-bold text-[1.7em] text-left"><span className="decoration-light-color decoration-4 underline underline-offset-[3px]">Luck</span> is what happens when preparation meets opportunity.</h2>
-            <motion.div className=" mt-3">
-              <p className="  text-left">
+      <motion.div
+        className="flex flex-col-reverse lg:flex-row items-center justify-center py-[5em] px-4 lg:px-[10em] gap-8"
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+          <div className="flex flex-col text-center lg:text-left w-full lg:basis-1/3 text-[calc(50vh/25)] text-black">
+            <h2 className="font-bold text-[1.7em]">
+              <span className="decoration-light-color decoration-4 underline underline-offset-[3px]">Luck</span> is what happens when preparation meets opportunity.
+            </h2>
+            <motion.div className="mt-3">
+              <p>
                 Our consulting is made by <span className="decoration-light-color decoration-4 underline underline-offset-[3px]">students</span> for students.
               </p>
             </motion.div>
