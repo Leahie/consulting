@@ -274,9 +274,9 @@
     .hamburger-btn {
         display: flex;
         align-items: center;
-        position: relative;
+        position: absolute;
         z-index: 10001;
-
+        top: 3em;
         height: 36px;
         width: 36px;
     }
@@ -291,9 +291,7 @@
         width: 100%;
         align-items: center;
     }
-    .hamburger-btn{
-        top: 5.7em
-    }
+
 }
 
 @media (max-width: 480px) {
@@ -315,6 +313,7 @@
         right: 1.5rem;
     }
     .hamburger-btn{
-        top: 4.5em
+        position:absolute;
+        top: 2em
     }
 }

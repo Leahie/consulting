@@ -41,8 +41,8 @@ export default function Nav(props: BoxProps){
             <button
                 className={`hamburger-btn transition-all ${
                 isMenuOpen
-                    ? 'fixed top-6 right-6 z-[10001]'
-                    : 'absolute top-[4.5em] right-[2.5em] z-[100]'
+                    ? 'fixed top-3 right-6 z-[10001]'
+                    : 'absolute top-[4em] right-[2.5em] z-[100]'
                 }`}
                 onClick={toggleMenu}
                 aria-label="Toggle navigation menu"
@@ -52,7 +52,7 @@ export default function Nav(props: BoxProps){
 
             <div className={`nav-container ${montserrat.className}`}>
                 <div className="nav-logo">
-                    <Link href="/" className="logo-link text-[20px] sm:text-[25px]">UniBound Counsulting</Link>
+                    <Link href="/" className="logo-link text-[17px] sm:text-[25px]">UniBound Counsulting</Link>
 
                 </div>
 
