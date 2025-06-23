@@ -17,7 +17,7 @@ export default function ContactUs() {
 
     return(
        <>
-       <div>
+       <div className='text-black'> 
         <Hero
             source="/2.mp4"
             tagline={<h1 className="text-[7em]">{"Getting Started"}</h1>}

@@ -3,7 +3,7 @@ import { motion } from "framer-motion"
 
 export default function Method(){
     return(
-        <motion.div className="flex  justify-center gap-7 items-center flex-wrap "
+        <motion.div className="flex  justify-center gap-7 items-center flex-wrap text-black"
             initial={{ opacity: 0}}
                   whileInView={{ opacity: 1}}
                   transition={{ type: "spring", duration: 2 }}

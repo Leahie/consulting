@@ -36,7 +36,7 @@ export default function Team(){
 
     return(
         
-        <div className="bg-slate-100 py-5">
+        <div className="bg-slate-100 py-5 text-black">
             
                   <h2 className=" flex justify-between items-end text-[40px] mx-[1em] my-[1em] text-dark-color font-barlow text-500 flex flex-col">
                 <span className="font-bold text-[100px]">Dive in </span> <span>with our trusted advisors</span>
