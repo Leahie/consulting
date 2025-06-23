@@ -22,7 +22,7 @@ export default function Method(){
             <div className="bg-linear-to-b from-slate-100 to-slate-300 p-5 rounded-sm sm:w-[45%] lg:w-[20%] mx-5">
                 <h1 className="font-bold text-[25px]">Step 3</h1>
                 <h2>Rework and revise</h2>
-                <p>After completing a rough draft, go over your writing and see if there is anything that can be done better. First drafts are never perfect and it takes a long time to be satisfied with a piece of writing. Don’t be afraid to completely discard a draft and try something new. Stuck? Just In Consulting will work with you to fine-tune your essay so that every detail is perfect.</p>
+                <p>After completing a rough draft, go over your writing and see if there is anything that can be done better. First drafts are never perfect and it takes a long time to be satisfied with a piece of writing. Don’t be afraid to completely discard a draft and try something new. Stuck? UniBound Consulting will work with you to fine-tune your essay so that every detail is perfect.</p>
             </div>
 
         </motion.div>
